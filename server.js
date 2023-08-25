@@ -22,10 +22,13 @@ app.use(cookieParser());
 const PORT = process.env.PORT || 8081;
 
 // HTTP GET request
-app.get("/", (req, res) => {
-  res.status(201).json("HOME GET Request");
-});
 
+app.get("/", (req, res) => {
+  res.status(201).json("HOME GET");
+});
+app.get("/hello", (req, res) => {
+  res.status(201).json("Hello GET");
+});
 // api routes
 // app.use("/api", router);
 app.use("/api", userRoute);
