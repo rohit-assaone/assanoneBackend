@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 require('dotenv/config');
-const { MongoMemoryServer } = require("mongodb-memory-server");
 
 const connect = async () => {
    mongoose.connect(process.env.MONGO_URI,  {
